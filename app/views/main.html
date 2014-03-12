@@ -1,0 +1,87 @@
+
+    <div class="container" ng-class="getClass">
+      <div class="hero-unit">
+
+<!--         <h4>Angular Firebase</h4>
+ -->        
+<!--         <div ng-repeat="todo in todos">
+          {{todo.item}}
+        </div>
+
+        <ul class="item-list">
+          <li ng-repeat="(k,v) in items"><button ng-click="deleteItem(k)">delete</button> - {{v.text}}</li>
+        </ul> 
+ -->        
+
+        <div class="resultsPane" ng-class="{true: 'active', false: 'inactive'}[isActive]">
+            <div class="resultsTab" ng-click="openState()">PAST RESULTS</div>
+     <!--        <ul class="resultsList">
+              <li ng-repeat="(k,v) in items"><button ng-click="deleteItem(k)">delete</button> - {{v.text}}</li>
+            </ul> 
+ -->
+            <ul class="resultsList">
+<!--               <li ng-repeat="(k,v) in items">{{v}}</li>
+ -->
+<!--                   <li ng-repeat="result in resultsList">
+                    <span class="answer{{result.result}}">{{result.answer}}</span>
+                  </li>
+ -->                  
+                <li ng-repeat="result in resultsList" my-result>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="flashCardTable">
+           <div class="problemNav" ng-model="prev">
+           </div>
+           <h4 class="title">FLASH CARDS</h4>
+           <input ng-repeat="card in cards" class="flashCard" type="text" value="{{card}}" ng-model="card" />
+
+          <input type="text" name="input" class="userAnswer" ng-model="userAnswer" required />
+
+          <button ng-click="testResult()" class="testResult">TEST YOUR RESULT</button>
+
+           <div class="problemNav" ng-model="next">
+           </div>
+
+        </div>        
+
+ <!--        <div>
+          <input type=text ng-model="newItem.text" />
+          <button ng-click="addNewItem()">Add Item</button>
+          <button ng-click="removeAll()">Remove All</button>
+        </div> -->
+      <!--   <hr> -->
+    <!--     {{items | json}} -->
+      </div>
+    </div>
+
+<!-- <div class="hero-unit">
+  <h1>'Allo, 'Allo!</h1>
+  <p>You now have</p>
+  <ul>
+      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
+  </ul>
+
+        <div ng-repeat="todo in todos">
+          {{todo.item}}
+        </div>
+
+        <ul class="item-list">
+          <li ng-repeat="(k,v) in items"><button ng-click="deleteItem(k)">delete</button> - {{v.text}}</li>
+        </ul> 
+        <div ng-repeat="card in cards">
+            df {{card}}
+        </div>
+
+        <div>
+          <button ng-click="addNewItem()">Add Item</button>
+          <button ng-click="removeAll()">Remove All</button>
+          <button type="submit" ng-click="newOrder()">Place new order</button>
+        </div>
+
+  <p>installed.</p>
+  <h3>Enjoy coding! - Yeoman</h3>
+</div>
+ -->

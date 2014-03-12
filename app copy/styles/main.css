@@ -1,0 +1,158 @@
+body {
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000; }
+
+.answerRight .flashCardTable {
+  background: red; }
+
+.answerWrong .flashCardTable {
+  background: green; }
+
+.flashCardTable, .resultsPane {
+  left: calc(50% - 250px);
+  left: -webkit-calc(50% - 250px);
+  left: -moz-calc(50% - 250px);
+  left: -ms-calc(50% - 250px);
+  left: -o-calc(50% - 250px);
+  position: absolute;
+  z-index: 100;
+  width: 500px;
+  margin: 0 auto;
+  border: 1px solid #e22;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 20px 40px;
+  background-color: #8dc4ee;
+  text-align: center;
+  font-family: 'Averia Sans Libre', cursive; }
+  .flashCardTable input, .resultsPane input {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; }
+  .flashCardTable .title, .resultsPane .title {
+    font-size: 54px;
+    line-height: 54px;
+    margin: 10px 0;
+    color: #fff; }
+  .flashCardTable .problemNav, .resultsPane .problemNav {
+    width: 90px;
+    position: absolute;
+    height: 500px;
+    top: 0;
+    cursor: pointer; }
+    .flashCardTable .problemNav:before, .resultsPane .problemNav:before {
+      display: block;
+      height: 20px;
+      width: 20px;
+      position: relative;
+      font-size: 160px;
+      line-height: 160px;
+      color: #fff; }
+    .flashCardTable .problemNav:hover, .resultsPane .problemNav:hover {
+      color: red; }
+  .flashCardTable .problemNav[ng-model~="prev"], .resultsPane .problemNav[ng-model~="prev"] {
+    left: 10px; }
+    .flashCardTable .problemNav[ng-model~="prev"]:before, .resultsPane .problemNav[ng-model~="prev"]:before {
+      content: '<'; }
+  .flashCardTable .problemNav[ng-model~="next"], .resultsPane .problemNav[ng-model~="next"] {
+    right: 10px; }
+    .flashCardTable .problemNav[ng-model~="next"]:before, .resultsPane .problemNav[ng-model~="next"]:before {
+      content: '>'; }
+  .flashCardTable .userAnswer, .resultsPane .userAnswer {
+    background-color: #ffffff;
+    border: 0;
+    margin: 0 10px;
+    height: 200px;
+    width: 340px;
+    text-align: center;
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: 20px; }
+  .flashCardTable .flashCard, .resultsPane .flashCard {
+    background-color: #ff9600;
+    border: 0;
+    margin: 0 10px;
+    height: 200px;
+    width: 160px;
+    text-align: center;
+    font-size: 60px;
+    line-height: 60px; }
+  .flashCardTable .testResult, .resultsPane .testResult {
+    background-color: blue;
+    border: 0;
+    margin: 0 10px;
+    height: 200px;
+    width: 340px;
+    text-align: center;
+    font-size: 60px;
+    line-height: 60px;
+    clear: both;
+    margin-top: 20px;
+    cursor: pointer; }
+
+.resultsPane {
+  top: 245px;
+  position: absolute;
+  width: 600px;
+  height: 300px;
+  z-index: 0;
+  background-color: green;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out; }
+  .resultsPane .resultsTab {
+    cursor: pointer; }
+  .resultsPane .resultsList {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    display: block;
+    list-style-type: none;
+    border: 1px solid #fff;
+    padding: 0;
+    width: 60px;
+    margin: 0;
+    position: absolute;
+    right: 131px;
+    bottom: 100px; }
+    .resultsPane .resultsList li {
+      text-align: left;
+      border: 1px solid #fff;
+      padding: 5px; }
+      .resultsPane .resultsList li .answer0 {
+        background-color: green; }
+      .resultsPane .resultsList li .answer1 {
+        background-color: red; }
+
+.resultsPane.inactive {
+  left: calc(34% - 200px);
+  left: -webkit-calc(34% - 200px);
+  left: -moz-calc(34% - 200px);
+  left: -ms-calc(34% - 200px);
+  left: -o-calc(34% - 200px); }
+
+.resultsPane.active {
+  left: calc(15% - 100px);
+  left: -webkit-calc(15% - 100px);
+  left: -moz-calc(15% - 100px);
+  left: -ms-calc(15% - 100px);
+  left: -o-calc(15% - 100px); }
